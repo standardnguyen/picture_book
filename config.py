@@ -8,6 +8,8 @@ model_to_use = "gpt-3.5-turbo-0125"
 backup_model = "gpt-4-turbo"
 image_model = "dall-e-3"
 
+image_genre = "Expressionism"
+
 synopsis = '''
 "White Nights" by Fyodor Dostoevsky is a short story that revolves around the emotional journey of its unnamed narrator, often referred to as the Dreamer. Set in St. Petersburg, Russia, during the season of the white nights—those bright summer evenings when the sun barely sets—the story unfolds over four nights and one day.
 
