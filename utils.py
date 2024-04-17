@@ -14,9 +14,11 @@ def write_text_to_file(folder, filename, text_to_write):
     """
     # Ensure the folder exists
     os.makedirs(folder, exist_ok=True)
+
+    if "." not in filename: filename += ".txt"
     
     # Construct the full file path
-    file_path = os.path.join(folder, f"{filename}.txt")
+    file_path = os.path.join(folder, f"{filename}")
     
     # Write the text to the file
     with open(file_path, 'w', encoding='utf-8') as file:
