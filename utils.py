@@ -1,7 +1,20 @@
 import os
 from typing_extensions import override
 from openai import AssistantEventHandler
+import requests
 
+def download_image(url, filename):
+    # Send an HTTP GET request to the URL
+    response = requests.get(url)
+    
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Open a binary file in write mode
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+        print("Image downloaded and saved as", filename)
+    else:
+        print("Failed to retrieve image. Status code:", response.status_code)
 
 def write_text_to_file(folder, filename, text_to_write):
     """
